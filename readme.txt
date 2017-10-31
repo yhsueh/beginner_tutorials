@@ -5,5 +5,7 @@ Build and Run procedures
 
 3. Create a package inside workspace src folder using command catkin_create_pkg beginning_tutorials std_msgs rospy roscpp
 
-4.  
+4. Go back to parent directory and input command catkin_make again.
+
+5.
 
