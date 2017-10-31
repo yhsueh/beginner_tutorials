@@ -1,0 +1,4 @@
+python ./cpplint.py --extensions=h,hpp,cpp $( find . -name *.h -or -name *.hpp -or -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" )
+Done processing ./src/talker.cpp
+Done processing ./src/listener.cpp
+Total errors found: 0
