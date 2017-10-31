@@ -1,4 +1,4 @@
-Build procedures:
+## Build procedures:
 1. Create a catkin workspace using command catkin_make in the workspace folder.
 
 2. Make sure ROS_PACKAGE_PATH enviroment variable contain the workspace folder. This is done by sourcing the generated setup file under devel folder in the parent directory.
@@ -14,7 +14,7 @@ Build procedures:
 7. Include necessary dependencies like roscpp and std_msgs and beginner_tutorials_generate_messages_cpp.
 
 
-Run procedures:
+## Run procedures:
 1. Create three terminals. Make sure the package's workspace is included in the PATH variable.
 
 2. Input roscore to establish a master.
