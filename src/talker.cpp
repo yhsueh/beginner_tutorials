@@ -31,9 +31,23 @@
 // %Tag(MSG_HEADER)%
 #include "std_msgs/String.h"
 // %EndTag(MSG_HEADER)%
+#include "beginner_tutorials/ChangeString.h"
+#include <string>
 
 #include <sstream>
+#include <cstdlib>
 
+
+std::string customedString;
+
+bool change(beginner_tutorials::ChangeString::Request &req,
+  beginner_tutorials::ChangeString::Response &res){
+
+    customedString = req.input;
+    res.reply = customedString;
+        
+  return true;
+}
 /**
  * This tutorial demonstrates simple sending of messages over the ROS system.
  */
@@ -62,6 +76,8 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
 // %EndTag(NODEHANDLE)%
 
+  ros::ServiceServer service = n.advertiseService("change_string", change);
+
   /**
    * The advertise() function is how you tell ROS that you want to
    * publish on a given topic name. This invokes a call to the ROS
@@ -84,7 +100,7 @@ int main(int argc, char **argv)
 // %EndTag(PUBLISHER)%
 
 // %Tag(LOOP_RATE)%
-  ros::Rate loop_rate(10);
+  ros::Rate loop_rate(1);
 // %EndTag(LOOP_RATE)%
 
   /**
@@ -103,7 +119,12 @@ int main(int argc, char **argv)
     std_msgs::String msg;
 
     std::stringstream ss;
-    ss << "hello world " << count;
+
+    if (customedString.empty())
+      ss << "Ni Hao Ma " << count;
+    else
+      ss << customedString<< "" << count;
+    
     msg.data = ss.str();
 // %EndTag(FILL_MESSAGE)%
 
