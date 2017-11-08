@@ -23,7 +23,7 @@ int main(int argc, char **argv)
   if (client.call(srv))
   {
     ROS_INFO("Successfully call service change_string");
-    ROS_INFO("The string has been changed to %s",srv.response.reply);
+    ROS_INFO("The string has been changed to %s",srv.response.reply.c_str());
   }
   else
   {
