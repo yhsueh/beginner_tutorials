@@ -28,13 +28,19 @@
 // %Tag(FULLTEXT)%
 #include "ros/ros.h"
 #include "std_msgs/String.h"
-
+#include <iostream>
+#include <string>
 /**
  * This tutorial demonstrates simple receipt of messages over the ROS system.
  */
 // %Tag(CALLBACK)%
 void chatterCallback(const std_msgs::String::ConstPtr& msg)
-{
+{  
+  if (!msg->data.compare("Hello")){
+    ROS_DEBUG("%s",msg->data.c_str());
+    ROS_WARN("I heard nothing new");
+  }
+
   ROS_INFO("I heard: [%s]", msg->data.c_str());
 }
 // %EndTag(CALLBACK)%
@@ -87,6 +93,7 @@ int main(int argc, char **argv)
 // %Tag(SPIN)%
   ros::spin();
 // %EndTag(SPIN)%
+
 
   return 0;
 }

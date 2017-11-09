@@ -45,6 +45,10 @@ bool change(beginner_tutorials::ChangeString::Request &req,
 
     customedString = req.input;
     res.reply = customedString;
+
+     if (customedString.empty()){
+      ROS_FATAL("No input is provided");
+    }
         
   return true;
 }
@@ -120,10 +124,11 @@ int main(int argc, char **argv)
 
     std::stringstream ss;
 
-    if (customedString.empty())
-      ss << "Ni Hao Ma " << count;
+    if (customedString.empty()){
+      ss << "Hello";      
+    }
     else
-      ss << customedString<< "" << count;
+      ss << customedString;
     
     msg.data = ss.str();
 // %EndTag(FILL_MESSAGE)%
