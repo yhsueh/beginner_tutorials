@@ -66,8 +66,9 @@ int main(int argc, char **argv)
   }
   else{
     frequency = atoll(argv[1]);
-    if (frequency == 1){
-      ROS_ERROR("Frequency might not be specified within Roslaunch command\n It is 1 by default");
+    if (frequency == 0){
+      frequency = 1;
+      ROS_ERROR("Frequency is not speicifed in Roslaunch command\n Frequency is changed to 1 if nothing is specified");
     }
     else{
       ROS_WARN("Publishing frequency is set to value %d", frequency);
