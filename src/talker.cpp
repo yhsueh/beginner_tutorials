@@ -58,22 +58,6 @@ bool change(beginner_tutorials::ChangeString::Request &req,
  */
 int main(int argc, char **argv)
 {
-  int frequency;
-
-  if (argc < 2){
-    ROS_WARN("No argument is passed to talker, default publishing frequency = 1");
-    frequency = 1;
-  }
-  else{
-    frequency = atoll(argv[1]);
-    if (frequency == 0){
-      frequency = 1;
-      ROS_ERROR("Frequency is not speicifed in Roslaunch command\n Frequency is changed to 1 if nothing is specified");
-    }
-    else{
-      ROS_WARN("Publishing frequency is set to value %d", frequency);
-    }
-  }
   /**
    * The ros::init() function needs to see argc and argv so that it can perform
    * any ROS arguments and name remapping that were provided at the command line.
@@ -119,6 +103,26 @@ int main(int argc, char **argv)
 // %Tag(PUBLISHER)%
   ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
 // %EndTag(PUBLISHER)%
+
+
+ int frequency;
+
+  if (argc < 2){
+    ROS_WARN("No argument is passed to talker, default publishing frequency = 1");
+    frequency = 1;
+  }
+  else{
+    frequency = atoll(argv[1]);
+    if (frequency == 0){
+      frequency = 1;
+      ROS_ERROR("Frequency is not speicifed in Roslaunch command\n Frequency is changed to 1 if nothing is specified");
+    }
+    else{
+      ROS_WARN("Publishing frequency is set to a new value %d", frequency);
+    }
+  }
+
+
 
 // %Tag(LOOP_RATE)%
   ros::Rate loop_rate(frequency);
