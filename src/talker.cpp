@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008, Morgan Quigley and Willow Garage, Inc.
+ * Copyright (C) 2017, Yuyu Hsueh.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -8,9 +8,6 @@
  *   * Redistributions in binary form must reproduce the above copyright
  *     notice, this list of conditions and the following disclaimer in the
  *     documentation and/or other materials provided with the distribution.
- *   * Neither the names of Stanford University or Willow Garage, Inc. nor the names of its
- *     contributors may be used to endorse or promote products derived from
- *     this software without specific prior written permission.
  *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
@@ -33,14 +30,18 @@
 // %EndTag(MSG_HEADER)%
 #include "beginner_tutorials/ChangeString.h"
 #include <string>
-
 #include <sstream>
 #include <cstdlib>
-#include <iostream>
 
 
-std::string customedString;
+std::string customedString;  /**< This global string variable accepts a user-defined string from the change_string service. */
 
+
+/**
+ * In the callback function, the listener node replies what it received from the talker node.
+ * If the user didn't modify the original message through change_string service, the listener 
+ * replies with "I heard nothing new".
+ */
 bool change(beginner_tutorials::ChangeString::Request &req,
   beginner_tutorials::ChangeString::Response &res){
 
@@ -54,7 +55,9 @@ bool change(beginner_tutorials::ChangeString::Request &req,
   return true;
 }
 /**
- * This tutorial demonstrates simple sending of messages over the ROS system.
+ * This code is adopted from the ROS message tutorial. It has been modified to be able to accept 
+ * the user-defined string and changes its output accordingly. In addition, the code also accepts 
+ * a frequency argument, which controls the rate of rate publishing.
  */
 int main(int argc, char **argv)
 {
@@ -80,6 +83,12 @@ int main(int argc, char **argv)
 // %Tag(NODEHANDLE)%
   ros::NodeHandle n;
 // %EndTag(NODEHANDLE)%
+
+  /**
+	* The service function enables the user to change the base string. The ROS service
+	* consists of two parts, request and reply. The talker is a publishig node and also a 
+	* server node. The server node will receive a message from the client node when the client is called.
+  */
 
   ros::ServiceServer service = n.advertiseService("change_string", change);
 
@@ -128,12 +137,7 @@ int main(int argc, char **argv)
   ros::Rate loop_rate(frequency);
 // %EndTag(LOOP_RATE)%
 
-  /**
-   * A count of how many messages we have sent. This is used to create
-   * a unique string for each message.
-   */
 // %Tag(ROS_OK)%
-  int count = 0;
   while (ros::ok())
   {
 // %EndTag(ROS_OK)%

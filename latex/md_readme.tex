@@ -1,0 +1,28 @@
+
+\begin{DoxyEnumerate}
+\item Create a catkin workspace using command catkin\+\_\+make in the workspace folder.
+\item Make sure R\+O\+S\+\_\+\+P\+A\+C\+K\+A\+G\+E\+\_\+\+P\+A\+TH enviroment variable contain the workspace folder. This is done by sourcing the generated setup file under devel folder in the parent directory.
+\item Create a package inside workspace src folder using command catkin\+\_\+create\+\_\+pkg beginning\+\_\+tutorials std\+\_\+msgs rospy roscpp.
+\item Go back to parent directory and input command catkin\+\_\+make again.
+\item Add talker and listener cpp files into the source folder under beginner\+\_\+tutorials package.
+\item Modify Cmake\+Lists.\+txt to include talker and listener cpp files.
+\item Include necessary dependencies like roscpp and std\+\_\+msgs and beginner\+\_\+tutorials\+\_\+generate\+\_\+messages\+\_\+cpp.
+\end{DoxyEnumerate}
+
+\subsection*{Run procedures\+:}
+
+
+\begin{DoxyEnumerate}
+\item Create three terminals. Make sure the package\textquotesingle{}s workspace is included in the P\+A\+TH variable.
+\item Input roscore to establish a master.
+\item Input 
+\begin{DoxyCode}
+1 rosrun beginner\_tutorials talker
+\end{DoxyCode}
+ in a different terminal to create the talker node.
+\item Input 
+\begin{DoxyCode}
+1 rosrun beginner\_tutorials listener
+\end{DoxyCode}
+ in the final terminal to create the listener node. 
+\end{DoxyEnumerate}

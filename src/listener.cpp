@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008, Morgan Quigley and Willow Garage, Inc.
+ * Copyright (C) 2017, Yuyu Hsueh.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -8,9 +8,6 @@
  *   * Redistributions in binary form must reproduce the above copyright
  *     notice, this list of conditions and the following disclaimer in the
  *     documentation and/or other materials provided with the distribution.
- *   * Neither the names of Stanford University or Willow Garage, Inc. nor the names of its
- *     contributors may be used to endorse or promote products derived from
- *     this software without specific prior written permission.
  *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
@@ -28,10 +25,11 @@
 // %Tag(FULLTEXT)%
 #include "ros/ros.h"
 #include "std_msgs/String.h"
-#include <iostream>
-#include <string>
+
 /**
- * This tutorial demonstrates simple receipt of messages over the ROS system.
+ * In the callback function, the listener node replies what it received from the talker node.
+ * If the user didn't modify the original message through change_string service, the listener 
+ * replies with "I heard nothing new".
  */
 // %Tag(CALLBACK)%
 void chatterCallback(const std_msgs::String::ConstPtr& msg)
