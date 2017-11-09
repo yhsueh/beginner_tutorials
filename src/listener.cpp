@@ -32,10 +32,9 @@
  * replies with "I heard nothing new".
  */
 // %Tag(CALLBACK)%
-void chatterCallback(const std_msgs::String::ConstPtr& msg)
-{  
-  if (!msg->data.compare("Hello")){
-    ROS_DEBUG("%s",msg->data.c_str());
+void chatterCallback(const std_msgs::String::ConstPtr& msg) {
+  if (!msg->data.compare("Hello")) {
+    ROS_DEBUG("%s", msg->data.c_str());
     ROS_WARN("I heard nothing new");
   }
 
@@ -43,8 +42,7 @@ void chatterCallback(const std_msgs::String::ConstPtr& msg)
 }
 // %EndTag(CALLBACK)%
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
   /**
    * The ros::init() function needs to see argc and argv so that it can perform
    * any ROS arguments and name remapping that were provided at the command line.
@@ -91,7 +89,6 @@ int main(int argc, char **argv)
 // %Tag(SPIN)%
   ros::spin();
 // %EndTag(SPIN)%
-
 
   return 0;
 }

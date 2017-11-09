@@ -33,9 +33,7 @@
 #include <sstream>
 #include <cstdlib>
 
-
-std::string customedString;  /**< This global string variable accepts a user-defined string from the change_string service. */
-
+std::string customedString; /**< This global string variable accepts a user-defined string from the change_string service. */
 
 /**
  * In the callback function, the listener node replies what it received from the talker node.
@@ -43,15 +41,15 @@ std::string customedString;  /**< This global string variable accepts a user-def
  * replies with "I heard nothing new".
  */
 bool change(beginner_tutorials::ChangeString::Request &req,
-  beginner_tutorials::ChangeString::Response &res){
+            beginner_tutorials::ChangeString::Response &res) {
 
-    customedString = req.input;
-    res.reply = customedString;
+  customedString = req.input;
+  res.reply = customedString;
 
-     if (customedString.empty()){
-      ROS_FATAL("No input is provided");
-    }
-        
+  if (customedString.empty()) {
+    ROS_FATAL("No input is provided");
+  }
+
   return true;
 }
 /**
@@ -59,8 +57,7 @@ bool change(beginner_tutorials::ChangeString::Request &req,
  * the user-defined string and changes its output accordingly. In addition, the code also accepts 
  * a frequency argument, which controls the rate of rate publishing.
  */
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
   /**
    * The ros::init() function needs to see argc and argv so that it can perform
    * any ROS arguments and name remapping that were provided at the command line.
@@ -85,10 +82,10 @@ int main(int argc, char **argv)
 // %EndTag(NODEHANDLE)%
 
   /**
-	* The service function enables the user to change the base string. The ROS service
-	* consists of two parts, request and reply. The talker is a publishig node and also a 
-	* server node. The server node will receive a message from the client node when the client is called.
-  */
+   * The service function enables the user to change the base string. The ROS service
+   * consists of two parts, request and reply. The talker is a publishig node and also a 
+   * server node. The server node will receive a message from the client node when the client is called.
+   */
 
   ros::ServiceServer service = n.advertiseService("change_string", change);
 
@@ -110,36 +107,33 @@ int main(int argc, char **argv)
    * buffer up before throwing some away.
    */
 // %Tag(PUBLISHER)%
-  ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
+  ros::Publisher chatter_pub = n.advertise < std_msgs::String
+      > ("chatter", 1000);
 // %EndTag(PUBLISHER)%
 
+  int frequency;
 
- int frequency;
-
-  if (argc < 2){
-    ROS_WARN("No argument is passed to talker, default publishing frequency = 1");
+  if (argc < 2) {
+    ROS_WARN(
+        "No argument is passed to talker, default publishing frequency = 1");
     frequency = 1;
-  }
-  else{
+  } else {
     frequency = atoll(argv[1]);
-    if (frequency == 0){
+    if (frequency == 0) {
       frequency = 1;
-      ROS_ERROR("Frequency is not speicifed in Roslaunch command\n Frequency is changed to 1 if nothing is specified");
-    }
-    else{
+      ROS_ERROR(
+          "Frequency is not speicifed in Roslaunch command\n Frequency is changed to 1 if nothing is specified");
+    } else {
       ROS_WARN("Publishing frequency is set to a new value %d", frequency);
     }
   }
-
-
 
 // %Tag(LOOP_RATE)%
   ros::Rate loop_rate(frequency);
 // %EndTag(LOOP_RATE)%
 
 // %Tag(ROS_OK)%
-  while (ros::ok())
-  {
+  while (ros::ok()) {
 // %EndTag(ROS_OK)%
     /**
      * This is a message object. You stuff it with data, and then publish it.
@@ -149,12 +143,11 @@ int main(int argc, char **argv)
 
     std::stringstream ss;
 
-    if (customedString.empty()){
-      ss << "Hello";      
-    }
-    else
+    if (customedString.empty()) {
+      ss << "Hello";
+    } else
       ss << customedString;
-    
+
     msg.data = ss.str();
 // %EndTag(FILL_MESSAGE)%
 
@@ -179,9 +172,7 @@ int main(int argc, char **argv)
 // %Tag(RATE_SLEEP)%
     loop_rate.sleep();
 // %EndTag(RATE_SLEEP)%
-    ++count;
   }
-
 
   return 0;
 }

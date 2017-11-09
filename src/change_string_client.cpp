@@ -27,36 +27,31 @@
 #include <cstdlib>
 
 /** This is the client node of the service "change_string". One would enter a string argument, which would
-  * be sent to the server node. And then, the server node would change its publishing content based on the 
-  * string provided by the user. If no service is called, then the default string is "Hello".
-  */
-int main(int argc, char **argv)
-{
+ * be sent to the server node. And then, the server node would change its publishing content based on the 
+ * string provided by the user. If no service is called, then the default string is "Hello".
+ */
+int main(int argc, char **argv) {
   ros::init(argc, argv, "change_string_client");
 
   ros::NodeHandle n;
-  ros::ServiceClient client = n.serviceClient<beginner_tutorials::ChangeString>("change_string");
+  ros::ServiceClient client = n.serviceClient < beginner_tutorials::ChangeString
+      > ("change_string");
   beginner_tutorials::ChangeString srv;
   srv.request.input = argv[1];
 
-    if (argc < 2)
-  {
+  if (argc < 2) {
     ROS_FATAL("usage: Error! Please enter a desired string");
     return 1;
   }
 
-  if (argc > 2){
-  	ROS_WARN("More than one string is provided, only the first is taken");
+  if (argc > 2) {
+    ROS_WARN("More than one string is provided, only the first is taken");
   }
 
-
-  if (client.call(srv))
-  {
+  if (client.call(srv)) {
     ROS_DEBUG("Successfully call service change_string");
-    ROS_INFO("The string has been changed to %s",srv.response.reply.c_str());
-  }
-  else
-  {
+    ROS_INFO("The string has been changed to %s", srv.response.reply.c_str());
+  } else {
     ROS_ERROR("Failed to call service change_string");
     return 1;
   }
