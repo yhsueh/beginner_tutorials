@@ -36,6 +36,7 @@
 
 #include <sstream>
 #include <cstdlib>
+#include <iostream>
 
 
 std::string customedString;
@@ -57,6 +58,21 @@ bool change(beginner_tutorials::ChangeString::Request &req,
  */
 int main(int argc, char **argv)
 {
+  int frequency;
+
+  if (argc < 2){
+    ROS_WARN("No argument is passed to talker, default publishing frequency = 1");
+    frequency = 1;
+  }
+  else{
+    frequency = atoll(argv[1]);
+    if (frequency == 1){
+      ROS_ERROR("Frequency might not be specified within Roslaunch command\n It is 1 by default");
+    }
+    else{
+      ROS_WARN("Publishing frequency is set to value %d", frequency);
+    }
+  }
   /**
    * The ros::init() function needs to see argc and argv so that it can perform
    * any ROS arguments and name remapping that were provided at the command line.
@@ -104,7 +120,7 @@ int main(int argc, char **argv)
 // %EndTag(PUBLISHER)%
 
 // %Tag(LOOP_RATE)%
-  ros::Rate loop_rate(1);
+  ros::Rate loop_rate(frequency);
 // %EndTag(LOOP_RATE)%
 
   /**
