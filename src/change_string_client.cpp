@@ -36,7 +36,6 @@ int main(int argc, char **argv) {
   ros::ServiceClient client = n.serviceClient < beginner_tutorials::ChangeString
       > ("change_string");
   beginner_tutorials::ChangeString srv;
-  
   if (argc < 2) {
     ROS_FATAL("usage: Error! Please enter a desired string");
     return 1;
