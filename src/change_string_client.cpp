@@ -25,11 +25,6 @@
 #include "beginner_tutorials/ChangeString.h"
 #include "ros/ros.h"
 
-
-
-
-
-
 /** This is the client node of the service "change_string". One would enter a string argument, which would
  * be sent to the server node. And then, the server node would change its publishing content based on the 
  * string provided by the user. If no service is called, then the default string is "Hello".
@@ -41,8 +36,7 @@ int main(int argc, char **argv) {
   ros::ServiceClient client = n.serviceClient < beginner_tutorials::ChangeString
       > ("change_string");
   beginner_tutorials::ChangeString srv;
-  srv.request.input = argv[1];
-
+  
   if (argc < 2) {
     ROS_FATAL("usage: Error! Please enter a desired string");
     return 1;
@@ -51,6 +45,8 @@ int main(int argc, char **argv) {
   if (argc > 2) {
     ROS_WARN("More than one string is provided, only the first is taken");
   }
+
+  srv.request.input = argv[1];
 
   if (client.call(srv)) {
     ROS_DEBUG("Successfully call service change_string");

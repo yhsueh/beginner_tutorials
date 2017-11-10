@@ -1,21 +1,18 @@
 ## Build procedures:
-1. Create a catkin workspace using command catkin_make in the workspace folder.
+1. Clone Week10_HW branch from github.
+
+2. Move beginner_tutorials into src folder in your catkin_ws.
 
 2. Make sure ROS_PACKAGE_PATH enviroment variable contain the workspace folder. This is done by sourcing the generated setup file under devel folder in the parent directory.
 
-3. Create a package inside workspace src folder using command catkin_create_pkg beginning_tutorials std_msgs rospy roscpp.
+3. Input 
+```
+catkin_make
+```
+to build the ROS package.
 
-4. Go back to parent directory and input command catkin_make again.
-
-5. Add talker and listener cpp files into the source folder under beginner_tutorials package.
-
-6. Modify CmakeLists.txt to include talker and listener cpp files. 
-
-7. Include necessary dependencies like roscpp and std_msgs and beginner_tutorials_generate_messages_cpp.
-
-
-## Run procedures:
-1. Create three terminals. Make sure the package's workspace is included in the PATH variable.
+## Procedures for using service to change talker's string:
+1. Create four terminals. Make sure the package's workspace is included in the PATH variable.
 
 2. Input roscore to establish a master.
 
@@ -31,5 +28,26 @@ rosrun beginner_tutorials listener
 ```
 in the final terminal to create the listener node.
 
+5. Input
+```
+rosrun beginner_tutorials change_string_client <your-string-without bracket>
+```
+If no argument is passed, a fatal message will be returned. If more than one string is provided, only the first string is passed.
 
+## Procedures for using roslaunch to adjust publishing rate:
+1. Similar to last section. Create four terminals and repeat the procedures until the forth step.
 
+2. Input
+```
+roslaunch beginner_tutorials node.launch frequency:=<an integer>
+```
+If no argument is passed, a error message will be returned and set frequency to one. The displaying rate would increase or decrease based on the provided frequency.
+
+3. rqt_console and rqt_logger_level can display ROS logs. To use them, create two terminals and input the following:
+```
+rosrun rqt_console rqt_console
+```
+and
+```
+rosrun rqt_logger_level rqt_logger_level
+```
