@@ -21,10 +21,14 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-
-#include "ros/ros.h"
-#include "beginner_tutorials/ChangeString.h"
 #include <cstdlib>
+#include "beginner_tutorials/ChangeString.h"
+#include "ros/ros.h"
+
+
+
+
+
 
 /** This is the client node of the service "change_string". One would enter a string argument, which would
  * be sent to the server node. And then, the server node would change its publishing content based on the 

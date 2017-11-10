@@ -22,6 +22,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 // %Tag(FULLTEXT)%
+#include <string>
+#include <sstream>
+#include <cstdlib>
 // %Tag(ROS_HEADER)%
 #include "ros/ros.h"
 // %EndTag(ROS_HEADER)%
@@ -30,9 +33,7 @@
 // %EndTag(MSG_HEADER)%
 #include "beginner_tutorials/ChangeString.h"
 #include "passCustStr.hpp"
-#include <string>
-#include <sstream>
-#include <cstdlib>
+
 
 /**
  * This code is adopted from the ROS message tutorial. It has been modified to be able to accept 
@@ -130,8 +131,9 @@ int main(int argc, char **argv) {
 
     if (custStr.requestData.empty()) {
       ss << "Hello";
-    } else
+    } else {
       ss << custStr.requestData;
+    }
 
     msg.data = ss.str();
 // %EndTag(FILL_MESSAGE)%

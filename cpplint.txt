@@ -1,4 +1,15 @@
-python ./cpplint.py --extensions=h,hpp,cpp $( find . -name *.h -or -name *.hpp -or -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" )
+cpplint $( find . -name \*.hpp -or -name \*.cpp | grep -vE -e "^./build/" -e "^./vendor/" -e "^./docs/" -e "^./results" )
+./include/passCustStr.hpp:29:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./include/passCustStr.hpp:35:  Is this a non-const reference? If so, make const or use a pointer: beginner_tutorials::ChangeString::Request &req  [runtime/references] [2]
+./include/passCustStr.hpp:36:  Is this a non-const reference? If so, make const or use a pointer: beginner_tutorials::ChangeString::Response &res  [runtime/references] [2]
+Done processing ./include/passCustStr.hpp
+./src/talker.cpp:44:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+./src/talker.cpp:45:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./src/talker.cpp:112:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
 Done processing ./src/talker.cpp
+Done processing ./src/change_string_client.cpp
 Done processing ./src/listener.cpp
-Total errors found: 0
+./src/passCustStr.cpp:39:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+Done processing ./src/passCustStr.cpp
+Total errors found: 7
+
