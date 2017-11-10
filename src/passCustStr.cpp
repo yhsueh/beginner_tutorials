@@ -30,12 +30,12 @@
 #include "passCustStr.hpp"
 
 /** This member function is a bool type, it takes the arguments from the
-* change_string service.
-* @param beginner_tutorials::ChangeString::Request
-* @param beginner_tutorials::ChangeString::Response
-*/
+ * change_string service.
+ * @param beginner_tutorials::ChangeString::Request
+ * @param beginner_tutorials::ChangeString::Response
+ */
 bool passCustStr::change(beginner_tutorials::ChangeString::Request &req,
-            beginner_tutorials::ChangeString::Response &res) {
+                         beginner_tutorials::ChangeString::Response &res) {
 
   requestData = req.input;
   res.reply = requestData;

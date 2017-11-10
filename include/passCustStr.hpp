@@ -24,14 +24,14 @@
 #pragma once
 #include <string>
 #include "beginner_tutorials/ChangeString.h"
-class passCustStr{
-public:
-	/**< This global string variable accepts a user-defined string from the change_string service. */
-	std::string requestData;
-	/**
- * This member function is used as a callback for the change_string service. This is needed
- * because global string is strictly prohibited.
- */
-	bool change(beginner_tutorials::ChangeString::Request &req,
-		beginner_tutorials::ChangeString::Response &res);
+class passCustStr {
+ public:
+  /**< This global string variable accepts a user-defined string from the change_string service. */
+  std::string requestData;
+  /**
+   * This member function is used as a callback for the change_string service. This is needed
+   * because global string is strictly prohibited.
+   */
+  bool change(beginner_tutorials::ChangeString::Request &req,
+              beginner_tutorials::ChangeString::Response &res);
 };

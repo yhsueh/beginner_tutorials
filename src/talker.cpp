@@ -40,7 +40,7 @@
  * a frequency argument, which controls the rate of rate publishing.
  */
 int main(int argc, char **argv) {
-  
+
   passCustStr custStr; /** A class type is defined to pass service message as string data type */
   /**
    * The ros::init() function needs to see argc and argv so that it can perform
@@ -71,7 +71,9 @@ int main(int argc, char **argv) {
    * server node. The server node will receive a message from the client node when the client is called.
    */
 
-  ros::ServiceServer service = n.advertiseService("change_string", &passCustStr::change, &custStr);
+  ros::ServiceServer service = n.advertiseService("change_string",
+                                                  &passCustStr::change,
+                                                  &custStr);
 
   /**
    * The advertise() function is how you tell ROS that you want to
