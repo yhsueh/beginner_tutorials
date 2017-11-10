@@ -1,15 +1,19 @@
 var searchData=
 [
-  ['raw_5flines',['raw_lines',['../classcpplint_1_1CleansedLines.html#a9e94ce9e4f682be33c04fe82429c4dfd',1,'cpplint::CleansedLines']]],
-  ['readme_2emd',['readme.md',['../readme_8md.html',1,'']]],
-  ['removemultilinecomments',['RemoveMultiLineComments',['../namespacecpplint.html#ac259a6d0f292aeec05dee7ca312e1fc2',1,'cpplint']]],
-  ['removemultilinecommentsfromrange',['RemoveMultiLineCommentsFromRange',['../namespacecpplint.html#a3a5f71cdc2e78491b4bedde8a0103679',1,'cpplint']]],
-  ['replaceall',['ReplaceAll',['../namespacecpplint.html#a1b85a5657aeab8b4a0ed85e06aed3576',1,'cpplint']]],
-  ['repositoryname',['RepositoryName',['../classcpplint_1_1FileInfo.html#a2b3b79b7d46221a6b9d0ea0bebac2061',1,'cpplint::FileInfo']]],
-  ['requestdata',['requestData',['../classpassCustStr.html#a3ce7263adc4bbc1d6b621c35a9da4f62',1,'passCustStr']]],
-  ['reseterrorcounts',['ResetErrorCounts',['../classcpplint_1_1__CppLintState.html#ab802596abd5fba5e290e090388b6842a',1,'cpplint::_CppLintState']]],
-  ['resetnolintsuppressions',['ResetNolintSuppressions',['../namespacecpplint.html#a1d92dc3582da477f98ab5b85bd13fea0',1,'cpplint']]],
-  ['resetsection',['ResetSection',['../classcpplint_1_1__IncludeState.html#a31551f83fcc626e7babb1581a486b6fa',1,'cpplint::_IncludeState']]],
-  ['restorefilters',['RestoreFilters',['../classcpplint_1_1__CppLintState.html#a7a9c9fdfe033ebe1933450b4ae524598',1,'cpplint::_CppLintState']]],
-  ['reversecloseexpression',['ReverseCloseExpression',['../namespacecpplint.html#a15cd96cbf1c13e655e156fbd98cf0bae',1,'cpplint']]]
+  ['search',['Search',['../namespacecpplint.html#a75eae6bb88590e904f751502c8ee4bab',1,'cpplint']]],
+  ['seen_5felse',['seen_else',['../classcpplint_1_1__PreprocessorInfo.html#a7587e84a1e6db34c3c94317f5a5931cc',1,'cpplint::_PreprocessorInfo']]],
+  ['seen_5fopen_5fbrace',['seen_open_brace',['../classcpplint_1_1__BlockInfo.html#aa974539217437751383ad20896c974d7',1,'cpplint::_BlockInfo']]],
+  ['seenopenbrace',['SeenOpenBrace',['../classcpplint_1_1NestingState.html#a15abc0719a22ca8fbb7a8235f0e22b3e',1,'cpplint::NestingState']]],
+  ['setcountingstyle',['SetCountingStyle',['../classcpplint_1_1__CppLintState.html#ac2503f2d8a357edd3ca648d219c7317e',1,'cpplint::_CppLintState']]],
+  ['setfilters',['SetFilters',['../classcpplint_1_1__CppLintState.html#a359d4516eac0c1dce6223cf18181ac80',1,'cpplint::_CppLintState']]],
+  ['setlastheader',['SetLastHeader',['../classcpplint_1_1__IncludeState.html#a9bc1ada2060a49628c1fffa973b57df1',1,'cpplint::_IncludeState']]],
+  ['setoutputformat',['SetOutputFormat',['../classcpplint_1_1__CppLintState.html#ab43553d2e2027b58d08a7001c71c0902',1,'cpplint::_CppLintState']]],
+  ['setverboselevel',['SetVerboseLevel',['../classcpplint_1_1__CppLintState.html#ad4f97c907cc79e8d60237d0327830588',1,'cpplint::_CppLintState']]],
+  ['shouldchecknamespaceindentation',['ShouldCheckNamespaceIndentation',['../namespacecpplint.html#aaaeb792789007d86b0898676c00caa72',1,'cpplint']]],
+  ['special',['SPECIAL',['../license_8txt.html#a910ad17f295c48bc77c8ee2434bf4ac5',1,'license.txt']]],
+  ['split',['Split',['../classcpplint_1_1FileInfo.html#a43f1c5ff1771da52e29c60c114955e72',1,'cpplint::FileInfo']]],
+  ['stack',['stack',['../classcpplint_1_1NestingState.html#a6ae9bea040f988d152922788d0d73a15',1,'cpplint::NestingState']]],
+  ['stack_5fbefore_5felse',['stack_before_else',['../classcpplint_1_1__PreprocessorInfo.html#a34a80f1f97808614b7062ba1e5bbf2b9',1,'cpplint::_PreprocessorInfo']]],
+  ['stack_5fbefore_5fif',['stack_before_if',['../classcpplint_1_1__PreprocessorInfo.html#a0681b2adca3171a495fc1eca43d245c0',1,'cpplint::_PreprocessorInfo']]],
+  ['starting_5flinenum',['starting_linenum',['../classcpplint_1_1__BlockInfo.html#a81d316f03e42aebbfe0636f905c4c291',1,'cpplint::_BlockInfo']]]
 ];

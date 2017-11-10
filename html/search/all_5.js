@@ -7,6 +7,5 @@ var searchData=
   ['errors_5fby_5fcategory',['errors_by_category',['../classcpplint_1_1__CppLintState.html#afb33527113706b5fcae07d680d8cec99',1,'cpplint::_CppLintState']]],
   ['exemplary',['EXEMPLARY',['../license_8txt.html#ac4a6acd1ced6bfbf36f00e4629d74515',1,'license.txt']]],
   ['expectingfunctionargs',['ExpectingFunctionArgs',['../namespacecpplint.html#a7657def0315cfe229ba436632f2d5042',1,'cpplint']]],
-  ['extension',['Extension',['../classcpplint_1_1FileInfo.html#a2554b504117839931e901b59a59c67ae',1,'cpplint::FileInfo']]],
-  ['extensions',['extensions',['../cpplint_8txt.html#a0dc02cd6e12520977ff461327b1ce31d',1,'cpplint.txt']]]
+  ['extension',['Extension',['../classcpplint_1_1FileInfo.html#a2554b504117839931e901b59a59c67ae',1,'cpplint::FileInfo']]]
 ];

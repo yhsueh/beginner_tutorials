@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['last_5fline',['last_line',['../classcpplint_1_1__ClassInfo.html#a72e0f4576cdcb6f3886ed52e2affbc75',1,'cpplint::_ClassInfo']]],
-  ['liability',['LIABILITY',['../license_8txt.html#a293cddb201641aed1186322968630e55',1,'license.txt']]],
-  ['license_2etxt',['license.txt',['../license_8txt.html',1,'']]],
-  ['lines',['lines',['../classcpplint_1_1CleansedLines.html#a9cd74bd010da1610a46322d6821bd06a',1,'cpplint::CleansedLines']]],
-  ['lines_5fin_5ffunction',['lines_in_function',['../classcpplint_1_1__FunctionState.html#a886f5d476adc81f499a711750a399aa2',1,'cpplint::_FunctionState']]],
-  ['lines_5fwithout_5fraw_5fstrings',['lines_without_raw_strings',['../classcpplint_1_1CleansedLines.html#a0cc228ba3c00ba590b27a759cf8023ce',1,'cpplint::CleansedLines']]],
-  ['listener_2ecpp',['listener.cpp',['../listener_8cpp.html',1,'']]]
+  ['main',['main',['../namespacecpplint.html#a03dd39c6bfb4337676fcfaf5cd797c91',1,'cpplint.main()'],['../change__string__client_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;change_string_client.cpp'],['../listener_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;listener.cpp'],['../talker_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;talker.cpp']]],
+  ['match',['Match',['../namespacecpplint.html#a73ac2ecfcd9c52b4a3755176c68dea7e',1,'cpplint']]],
+  ['met',['met',['../license_8txt.html#ac8582a50364a60dd4d7d7d24f725c413',1,'license.txt']]],
+  ['modification',['modification',['../license_8txt.html#ad26192e5b2b1fdec8883d2c0110e35c6',1,'license.txt']]]
 ];
