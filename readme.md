@@ -1,5 +1,8 @@
 ## Build procedures:
-1. Clone Week10_HW branch from github.
+1. Clone Week10_HW branch from github by inputting
+```
+git clone -b Week10_HW https://github.com/yhsueh/beginner_tutorials.git
+```
 
 2. Move beginner_tutorials into src folder in your catkin_ws.
 
