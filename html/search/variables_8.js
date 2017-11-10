@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['open_5fparentheses',['open_parentheses',['../classcpplint_1_1__BlockInfo.html#a02a0b48995a599f6b2bbaa6f16cca98a',1,'cpplint::_BlockInfo']]],
-  ['output_5fformat',['output_format',['../classcpplint_1_1__CppLintState.html#a5c68ca79b0ff9b2fba1c488a7b2bd3f0',1,'cpplint::_CppLintState']]]
+  ['met',['met',['../license_8txt.html#ac8582a50364a60dd4d7d7d24f725c413',1,'license.txt']]],
+  ['modification',['modification',['../license_8txt.html#ad26192e5b2b1fdec8883d2c0110e35c6',1,'license.txt']]]
 ];

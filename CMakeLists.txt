@@ -17,9 +17,9 @@ generate_messages(DEPENDENCIES std_msgs)
 catkin_package()
 
 ## Build talker and listener
-include_directories(include ${catkin_INCLUDE_DIRS})
+include_directories(include ${catkin_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR}/include)
 
-add_executable(talker src/talker.cpp)
+add_executable(talker src/talker.cpp src/passCustStr.cpp)
 target_link_libraries(talker ${catkin_LIBRARIES})
 add_dependencies(talker beginner_tutorials_generate_messages_cpp beginner_tutorials_gencpp)
 

@@ -87,8 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">talker.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -96,6 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &quot;ros/ros.h&quot;</code><br />
 <code>#include &quot;std_msgs/String.h&quot;</code><br />
 <code>#include &quot;beginner_tutorials/ChangeString.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="passCustStr_8hpp_source.html">passCustStr.hpp</a>&quot;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
@@ -103,48 +103,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Include dependency graph for talker.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="talker_8cpp__incl.png" border="0" usemap="#src_2talker_8cpp" alt=""/></div>
+<map name="src_2talker_8cpp" id="src_2talker_8cpp">
+<area shape="rect" id="node5" href="passCustStr_8hpp.html" title="passCustStr.hpp" alt="" coords="306,80,426,107"/>
+</map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8d760b7ed2677fdc4f4b7fae4af81ef2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="talker_8cpp.html#a8d760b7ed2677fdc4f4b7fae4af81ef2">change</a> (beginner_tutorials::ChangeString::Request &amp;req, beginner_tutorials::ChangeString::Response &amp;res)</td></tr>
-<tr class="separator:a8d760b7ed2677fdc4f4b7fae4af81ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="talker_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a1d6536f458fc505fc3137df036d24831"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="talker_8cpp.html#a1d6536f458fc505fc3137df036d24831">customedString</a></td></tr>
-<tr class="separator:a1d6536f458fc505fc3137df036d24831"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a8d760b7ed2677fdc4f4b7fae4af81ef2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool change </td>
-          <td>(</td>
-          <td class="paramtype">beginner_tutorials::ChangeString::Request &amp;&#160;</td>
-          <td class="paramname"><em>req</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">beginner_tutorials::ChangeString::Response &amp;&#160;</td>
-          <td class="paramname"><em>res</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>In the callback function, the listener node replies what it received from the talker node. If the user didn't modify the original message through change_string service, the listener replies with "I heard nothing new". </p>
-
-</div>
-</div>
 <a class="anchor" id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
 <div class="memitem">
 <div class="memproto">
@@ -169,6 +138,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This code is adopted from the ROS message tutorial. It has been modified to be able to accept the user-defined string and changes its output accordingly. In addition, the code also accepts a frequency argument, which controls the rate of rate publishing. </p>
+<p>A class type is defined to pass service message as string data type</p>
 <p>The ros::init() function needs to see argc and argv so that it can perform any ROS arguments and name remapping that were provided at the command line. For programmatic remappings you can use a different version of init() which takes remappings directly, but for most command-line programs, passing argc and argv is the easiest way to do it. The third argument to init() is the name of the node.</p>
 <p>You must call one of the versions of ros::init() before using any other part of the ROS system.</p>
 <p>NodeHandle is the main access point to communications with the ROS system. The first NodeHandle constructed will fully initialize this node, and the last NodeHandle destructed will close down the node.</p>
@@ -177,20 +147,6 @@ Variables</h2></td></tr>
 <p>The second parameter to advertise() is the size of the message queue used for publishing messages. If messages are published more quickly than we can send them, the number here specifies how many messages to buffer up before throwing some away.</p>
 <p>This is a message object. You stuff it with data, and then publish it.</p>
 <p>The publish() function is how you send messages. The parameter is the message object. The type of this object must agree with the type given as a template parameter to the advertise&lt;&gt;() call, as was done in the constructor above.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a1d6536f458fc505fc3137df036d24831"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string customedString</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>This global string variable accepts a user-defined string from the change_string service. </p>
 
 </div>
 </div>

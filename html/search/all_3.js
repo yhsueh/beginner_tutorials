@@ -1,7 +1,7 @@
 var searchData=
 [
   ['canonicalizealphabeticalorder',['CanonicalizeAlphabeticalOrder',['../classcpplint_1_1__IncludeState.html#ae69c652befa2d160194c0a02ff0c7d48',1,'cpplint::_IncludeState']]],
-  ['change',['change',['../talker_8cpp.html#a8d760b7ed2677fdc4f4b7fae4af81ef2',1,'talker.cpp']]],
+  ['change',['change',['../classpassCustStr.html#a997766f5e24240b515062346f2f0dd18',1,'passCustStr']]],
   ['change_5fstring_5fclient_2ecpp',['change_string_client.cpp',['../change__string__client_8cpp.html',1,'']]],
   ['chattercallback',['chatterCallback',['../listener_8cpp.html#ae5c0c11b4a60030ee8df1a3ae0b6f758',1,'listener.cpp']]],
   ['check',['Check',['../classcpplint_1_1__FunctionState.html#a5e4ad7d7b104038b45204ab4abf527b2',1,'cpplint::_FunctionState']]],
@@ -55,12 +55,12 @@ var searchData=
   ['closeexpression',['CloseExpression',['../namespacecpplint.html#af254258f584f59c87fcfd755e3c9017a',1,'cpplint']]],
   ['cmake_5fminimum_5frequired',['cmake_minimum_required',['../CMakeLists_8txt.html#a257873ea53487c7f7f72678d9fcbbd0d',1,'CMakeLists.txt']]],
   ['cmakelists_2etxt',['CMakeLists.txt',['../CMakeLists_8txt.html',1,'']]],
+  ['contract',['CONTRACT',['../license_8txt.html#ad1b3910f726d03f8987a2ad1665d309c',1,'license.txt']]],
   ['count',['Count',['../classcpplint_1_1__FunctionState.html#ac25c9711911ae181b091b52619cf2701',1,'cpplint::_FunctionState']]],
   ['counting',['counting',['../classcpplint_1_1__CppLintState.html#acd4f4157637d141a4de63bf10d2ca755',1,'cpplint::_CppLintState']]],
   ['cppcheck_2etxt',['cppcheck.txt',['../cppcheck_8txt.html',1,'']]],
   ['cpplint',['cpplint',['../namespacecpplint.html',1,'']]],
   ['cpplint_2epy',['cpplint.py',['../cpplint_8py.html',1,'']]],
   ['cpplint_2etxt',['cpplint.txt',['../cpplint_8txt.html',1,'']]],
-  ['current_5ffunction',['current_function',['../classcpplint_1_1__FunctionState.html#a320674f54bd75087febc8f0d83620569',1,'cpplint::_FunctionState']]],
-  ['customedstring',['customedString',['../talker_8cpp.html#a1d6536f458fc505fc3137df036d24831',1,'talker.cpp']]]
+  ['current_5ffunction',['current_function',['../classcpplint_1_1__FunctionState.html#a320674f54bd75087febc8f0d83620569',1,'cpplint::_FunctionState']]]
 ];

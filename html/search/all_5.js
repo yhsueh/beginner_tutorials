@@ -1,15 +1,12 @@
 var searchData=
 [
-  ['fileinfo',['FileInfo',['../classcpplint_1_1FileInfo.html',1,'cpplint']]],
-  ['filesbelongtosamemodule',['FilesBelongToSameModule',['../namespacecpplint.html#a66083e7d453e845a2751e76043fcd9ea',1,'cpplint']]],
-  ['filters',['filters',['../classcpplint_1_1__CppLintState.html#a8443105b9623383ab75fa242009c006e',1,'cpplint::_CppLintState']]],
-  ['findcheckmacro',['FindCheckMacro',['../namespacecpplint.html#aefff9c2eefe99656a226d11ce4d9b555',1,'cpplint']]],
-  ['findendofexpressioninline',['FindEndOfExpressionInLine',['../namespacecpplint.html#a6e623c46c1ae3bf650454744a693a633',1,'cpplint']]],
-  ['findheader',['FindHeader',['../classcpplint_1_1__IncludeState.html#a9bddbf581fc7a4c3c0258eaa42b94c3a',1,'cpplint::_IncludeState']]],
-  ['findnextmultilinecommentend',['FindNextMultiLineCommentEnd',['../namespacecpplint.html#a4965d6f615333f43155d9e430471e228',1,'cpplint']]],
-  ['findnextmultilinecommentstart',['FindNextMultiLineCommentStart',['../namespacecpplint.html#af0404401670283c9d4f948180e427401',1,'cpplint']]],
-  ['findstartofexpressioninline',['FindStartOfExpressionInLine',['../namespacecpplint.html#a8572f47efb3bc11632d1192fd74bb7eb',1,'cpplint']]],
-  ['flagcxx11features',['FlagCxx11Features',['../namespacecpplint.html#a386f43855367cc82348b0e2834e5cdc0',1,'cpplint']]],
-  ['flagcxx14features',['FlagCxx14Features',['../namespacecpplint.html#a744a4eecd461be0235779b03d34d6daf',1,'cpplint']]],
-  ['fullname',['FullName',['../classcpplint_1_1FileInfo.html#aed56577368c45cdf45fc4c9109129145',1,'cpplint::FileInfo']]]
+  ['elided',['elided',['../classcpplint_1_1CleansedLines.html#aa4d0a4d5081675c01656a5d86d99e8bd',1,'cpplint::CleansedLines']]],
+  ['end',['End',['../classcpplint_1_1__FunctionState.html#a1ab6b0a575c25c135f9004b7fb12dc4a',1,'cpplint::_FunctionState']]],
+  ['error',['Error',['../namespacecpplint.html#ae51e76d6d73b36b9e965d2ac9d21d7c2',1,'cpplint']]],
+  ['error_5fcount',['error_count',['../classcpplint_1_1__CppLintState.html#a4039ff9668057eff4549b99905ce753b',1,'cpplint::_CppLintState']]],
+  ['errors_5fby_5fcategory',['errors_by_category',['../classcpplint_1_1__CppLintState.html#afb33527113706b5fcae07d680d8cec99',1,'cpplint::_CppLintState']]],
+  ['exemplary',['EXEMPLARY',['../license_8txt.html#ac4a6acd1ced6bfbf36f00e4629d74515',1,'license.txt']]],
+  ['expectingfunctionargs',['ExpectingFunctionArgs',['../namespacecpplint.html#a7657def0315cfe229ba436632f2d5042',1,'cpplint']]],
+  ['extension',['Extension',['../classcpplint_1_1FileInfo.html#a2554b504117839931e901b59a59c67ae',1,'cpplint::FileInfo']]],
+  ['extensions',['extensions',['../cpplint_8txt.html#a0dc02cd6e12520977ff461327b1ce31d',1,'cpplint.txt']]]
 ];

@@ -29,35 +29,19 @@
 #include "std_msgs/String.h"
 // %EndTag(MSG_HEADER)%
 #include "beginner_tutorials/ChangeString.h"
+#include "passCustStr.hpp"
 #include <string>
 #include <sstream>
 #include <cstdlib>
 
-std::string customedString; /**< This global string variable accepts a user-defined string from the change_string service. */
-
-/**
- * In the callback function, the listener node replies what it received from the talker node.
- * If the user didn't modify the original message through change_string service, the listener 
- * replies with "I heard nothing new".
- */
-bool change(beginner_tutorials::ChangeString::Request &req,
-            beginner_tutorials::ChangeString::Response &res) {
-
-  customedString = req.input;
-  res.reply = customedString;
-
-  if (customedString.empty()) {
-    ROS_FATAL("No input is provided");
-  }
-
-  return true;
-}
 /**
  * This code is adopted from the ROS message tutorial. It has been modified to be able to accept 
  * the user-defined string and changes its output accordingly. In addition, the code also accepts 
  * a frequency argument, which controls the rate of rate publishing.
  */
 int main(int argc, char **argv) {
+  
+  passCustStr custStr; /** A class type is defined to pass service message as string data type */
   /**
    * The ros::init() function needs to see argc and argv so that it can perform
    * any ROS arguments and name remapping that were provided at the command line.
@@ -87,7 +71,7 @@ int main(int argc, char **argv) {
    * server node. The server node will receive a message from the client node when the client is called.
    */
 
-  ros::ServiceServer service = n.advertiseService("change_string", change);
+  ros::ServiceServer service = n.advertiseService("change_string", &passCustStr::change, &custStr);
 
   /**
    * The advertise() function is how you tell ROS that you want to
@@ -140,13 +124,12 @@ int main(int argc, char **argv) {
      */
 // %Tag(FILL_MESSAGE)%
     std_msgs::String msg;
-
     std::stringstream ss;
 
-    if (customedString.empty()) {
+    if (custStr.requestData.empty()) {
       ss << "Hello";
     } else
-      ss << customedString;
+      ss << custStr.requestData;
 
     msg.data = ss.str();
 // %EndTag(FILL_MESSAGE)%

@@ -3,10 +3,12 @@
 {\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}std\+\_\+msgs/\+String.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}beginner\+\_\+tutorials/\+Change\+String.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pass\+Cust\+Str.\+hpp\char`\"{}}\\*
 {\ttfamily \#include $<$string$>$}\\*
 {\ttfamily \#include $<$sstream$>$}\\*
 {\ttfamily \#include $<$cstdlib$>$}\\*
-Include dependency graph for talker.\+cpp\+:\nopagebreak
+Include dependency graph for talker.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,27 +18,12 @@ Include dependency graph for talker.\+cpp\+:\nopagebreak
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{talker_8cpp_a8d760b7ed2677fdc4f4b7fae4af81ef2}{change} (beginner\+\_\+tutorials\+::\+Change\+String\+::\+Request \&req, beginner\+\_\+tutorials\+::\+Change\+String\+::\+Response \&res)
-\item 
 int \hyperlink{talker_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
-\end{DoxyCompactItemize}
-\subsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-std\+::string \hyperlink{talker_8cpp_a1d6536f458fc505fc3137df036d24831}{customed\+String}
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\index{talker.\+cpp@{talker.\+cpp}!change@{change}}
-\index{change@{change}!talker.\+cpp@{talker.\+cpp}}
-\subsubsection[{\texorpdfstring{change(beginner\+\_\+tutorials\+::\+Change\+String\+::\+Request \&req, beginner\+\_\+tutorials\+::\+Change\+String\+::\+Response \&res)}{change(beginner_tutorials::ChangeString::Request &req, beginner_tutorials::ChangeString::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool change (
-\begin{DoxyParamCaption}
-\item[{beginner\+\_\+tutorials\+::\+Change\+String\+::\+Request \&}]{req, }
-\item[{beginner\+\_\+tutorials\+::\+Change\+String\+::\+Response \&}]{res}
-\end{DoxyParamCaption}
-)}\hypertarget{talker_8cpp_a8d760b7ed2677fdc4f4b7fae4af81ef2}{}\label{talker_8cpp_a8d760b7ed2677fdc4f4b7fae4af81ef2}
-In the callback function, the listener node replies what it received from the talker node. If the user didn\textquotesingle{}t modify the original message through change\+\_\+string service, the listener replies with \char`\"{}\+I heard nothing new\char`\"{}. \index{talker.\+cpp@{talker.\+cpp}!main@{main}}
+\index{talker.\+cpp@{talker.\+cpp}!main@{main}}
 \index{main@{main}!talker.\+cpp@{talker.\+cpp}}
 \subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
 \begin{DoxyParamCaption}
@@ -44,7 +31,9 @@ In the callback function, the listener node replies what it received from the ta
 \item[{char $\ast$$\ast$}]{argv}
 \end{DoxyParamCaption}
 )}\hypertarget{talker_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{talker_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
-This code is adopted from the R\+OS message tutorial. It has been modified to be able to accept the user-\/defined string and changes its output accordingly. In addition, the code also accepts a frequency argument, which controls the rate of rate publishing. The ros\+::init() function needs to see argc and argv so that it can perform any R\+OS arguments and name remapping that were provided at the command line. For programmatic remappings you can use a different version of init() which takes remappings directly, but for most command-\/line programs, passing argc and argv is the easiest way to do it. The third argument to init() is the name of the node.
+This code is adopted from the R\+OS message tutorial. It has been modified to be able to accept the user-\/defined string and changes its output accordingly. In addition, the code also accepts a frequency argument, which controls the rate of rate publishing. A class type is defined to pass service message as string data type
+
+The ros\+::init() function needs to see argc and argv so that it can perform any R\+OS arguments and name remapping that were provided at the command line. For programmatic remappings you can use a different version of init() which takes remappings directly, but for most command-\/line programs, passing argc and argv is the easiest way to do it. The third argument to init() is the name of the node.
 
 You must call one of the versions of ros\+::init() before using any other part of the R\+OS system.
 
@@ -59,9 +48,3 @@ The second parameter to advertise() is the size of the message queue used for pu
 This is a message object. You stuff it with data, and then publish it.
 
 The publish() function is how you send messages. The parameter is the message object. The type of this object must agree with the type given as a template parameter to the advertise$<$$>$() call, as was done in the constructor above.
-
-\subsection{Variable Documentation}
-\index{talker.\+cpp@{talker.\+cpp}!customed\+String@{customed\+String}}
-\index{customed\+String@{customed\+String}!talker.\+cpp@{talker.\+cpp}}
-\subsubsection[{\texorpdfstring{customed\+String}{customedString}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string customed\+String}\hypertarget{talker_8cpp_a1d6536f458fc505fc3137df036d24831}{}\label{talker_8cpp_a1d6536f458fc505fc3137df036d24831}
-This global string variable accepts a user-\/defined string from the change\+\_\+string service. 

@@ -4,37 +4,10 @@
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{CMakeLists_8txt_a257873ea53487c7f7f72678d9fcbbd0d}{cmake\+\_\+minimum\+\_\+required} (V\+E\+R\+S\+I\+ON 2.\+8.\+3) project(beginner\+\_\+tutorials) find\+\_\+package(catkin R\+E\+Q\+U\+I\+R\+ED C\+O\+M\+P\+O\+N\+E\+N\+TS roscpp rospy std\+\_\+msgs genmsg message\+\_\+generation) add\+\_\+service\+\_\+files(F\+I\+L\+ES Add\+Two\+Ints.\+srv Change\+String.\+srv) generate\+\_\+messages(D\+E\+P\+E\+N\+D\+E\+N\+C\+I\+ES std\+\_\+msgs) catkin\+\_\+package() include\+\_\+directories(include \$
-\item 
-\hyperlink{CMakeLists_8txt_a40715d33c1a048014457a014e14ff703}{add\+\_\+executable} (talker src/talker.\+cpp) target\+\_\+link\+\_\+libraries(talker \$
-\item 
-\hyperlink{CMakeLists_8txt_a1f028819c1eefa47f1f413c6954f0ddb}{add\+\_\+dependencies} (talker beginner\+\_\+tutorials\+\_\+generate\+\_\+messages\+\_\+cpp beginner\+\_\+tutorials\+\_\+gencpp) \hyperlink{CMakeLists_8txt_a40715d33c1a048014457a014e14ff703}{add\+\_\+executable}(listener src/listener.\+cpp) target\+\_\+link\+\_\+libraries(listener \$
-\item 
-\hyperlink{CMakeLists_8txt_aff6b4efc61b9086ee7e78ad0c8eb5b05}{add\+\_\+dependencies} (listener beginner\+\_\+tutorials\+\_\+generate\+\_\+messages\+\_\+cpp) \hyperlink{CMakeLists_8txt_a40715d33c1a048014457a014e14ff703}{add\+\_\+executable}(change\+\_\+string\+\_\+client src/change\+\_\+string\+\_\+client.\+cpp) target\+\_\+link\+\_\+libraries(change\+\_\+string\+\_\+client \$
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\index{C\+Make\+Lists.\+txt@{C\+Make\+Lists.\+txt}!add\+\_\+dependencies@{add\+\_\+dependencies}}
-\index{add\+\_\+dependencies@{add\+\_\+dependencies}!C\+Make\+Lists.\+txt@{C\+Make\+Lists.\+txt}}
-\subsubsection[{\texorpdfstring{add\+\_\+dependencies(talker beginner\+\_\+tutorials\+\_\+generate\+\_\+messages\+\_\+cpp beginner\+\_\+tutorials\+\_\+gencpp) add\+\_\+executable(listener src/listener.\+cpp) target\+\_\+link\+\_\+libraries(listener \$}{add_dependencies(talker beginner_tutorials_generate_messages_cpp beginner_tutorials_gencpp) add_executable(listener src/listener.cpp) target_link_libraries(listener $}}]{\setlength{\rightskip}{0pt plus 5cm}add\+\_\+dependencies (
-\begin{DoxyParamCaption}
-\item[{talker beginner\+\_\+tutorials\+\_\+generate\+\_\+messages\+\_\+cpp}]{beginner\+\_\+tutorials\+\_\+gencpp}
-\end{DoxyParamCaption}
-)}\hypertarget{CMakeLists_8txt_a1f028819c1eefa47f1f413c6954f0ddb}{}\label{CMakeLists_8txt_a1f028819c1eefa47f1f413c6954f0ddb}
-\index{C\+Make\+Lists.\+txt@{C\+Make\+Lists.\+txt}!add\+\_\+dependencies@{add\+\_\+dependencies}}
-\index{add\+\_\+dependencies@{add\+\_\+dependencies}!C\+Make\+Lists.\+txt@{C\+Make\+Lists.\+txt}}
-\subsubsection[{\texorpdfstring{add\+\_\+dependencies(listener beginner\+\_\+tutorials\+\_\+generate\+\_\+messages\+\_\+cpp) add\+\_\+executable(change\+\_\+string\+\_\+client src/change\+\_\+string\+\_\+client.\+cpp) target\+\_\+link\+\_\+libraries(change\+\_\+string\+\_\+client \$}{add_dependencies(listener beginner_tutorials_generate_messages_cpp) add_executable(change_string_client src/change_string_client.cpp) target_link_libraries(change_string_client $}}]{\setlength{\rightskip}{0pt plus 5cm}add\+\_\+dependencies (
-\begin{DoxyParamCaption}
-\item[{listener beginner\+\_\+tutorials\+\_\+generate\+\_\+messages\+\_\+cpp}]{}
-\end{DoxyParamCaption}
-)}\hypertarget{CMakeLists_8txt_aff6b4efc61b9086ee7e78ad0c8eb5b05}{}\label{CMakeLists_8txt_aff6b4efc61b9086ee7e78ad0c8eb5b05}
-\index{C\+Make\+Lists.\+txt@{C\+Make\+Lists.\+txt}!add\+\_\+executable@{add\+\_\+executable}}
-\index{add\+\_\+executable@{add\+\_\+executable}!C\+Make\+Lists.\+txt@{C\+Make\+Lists.\+txt}}
-\subsubsection[{\texorpdfstring{add\+\_\+executable(talker src/talker.\+cpp) target\+\_\+link\+\_\+libraries(talker \$}{add_executable(talker src/talker.cpp) target_link_libraries(talker $}}]{\setlength{\rightskip}{0pt plus 5cm}add\+\_\+executable (
-\begin{DoxyParamCaption}
-\item[{talker src/talker.}]{cpp}
-\end{DoxyParamCaption}
-)}\hypertarget{CMakeLists_8txt_a40715d33c1a048014457a014e14ff703}{}\label{CMakeLists_8txt_a40715d33c1a048014457a014e14ff703}
 \index{C\+Make\+Lists.\+txt@{C\+Make\+Lists.\+txt}!cmake\+\_\+minimum\+\_\+required@{cmake\+\_\+minimum\+\_\+required}}
 \index{cmake\+\_\+minimum\+\_\+required@{cmake\+\_\+minimum\+\_\+required}!C\+Make\+Lists.\+txt@{C\+Make\+Lists.\+txt}}
 \subsubsection[{\texorpdfstring{cmake\+\_\+minimum\+\_\+required(\+V\+E\+R\+S\+I\+O\+N 2.\+8.\+3) project(beginner\+\_\+tutorials) find\+\_\+package(catkin R\+E\+Q\+U\+I\+R\+E\+D C\+O\+M\+P\+O\+N\+E\+N\+T\+S roscpp rospy std\+\_\+msgs genmsg message\+\_\+generation) add\+\_\+service\+\_\+files(\+F\+I\+L\+E\+S Add\+Two\+Ints.\+srv Change\+String.\+srv) generate\+\_\+messages(\+D\+E\+P\+E\+N\+D\+E\+N\+C\+I\+E\+S std\+\_\+msgs) catkin\+\_\+package() include\+\_\+directories(include \$}{cmake_minimum_required(VERSION 2.8.3) project(beginner_tutorials) find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg message_generation) add_service_files(FILES AddTwoInts.srv ChangeString.srv) generate_messages(DEPENDENCIES std_msgs) catkin_package() include_directories(include $}}]{\setlength{\rightskip}{0pt plus 5cm}cmake\+\_\+minimum\+\_\+required (

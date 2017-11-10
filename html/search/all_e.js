@@ -1,14 +1,19 @@
 var searchData=
 [
-  ['raw_5flines',['raw_lines',['../classcpplint_1_1CleansedLines.html#a9e94ce9e4f682be33c04fe82429c4dfd',1,'cpplint::CleansedLines']]],
-  ['readme_2emd',['readme.md',['../readme_8md.html',1,'']]],
-  ['removemultilinecomments',['RemoveMultiLineComments',['../namespacecpplint.html#ac259a6d0f292aeec05dee7ca312e1fc2',1,'cpplint']]],
-  ['removemultilinecommentsfromrange',['RemoveMultiLineCommentsFromRange',['../namespacecpplint.html#a3a5f71cdc2e78491b4bedde8a0103679',1,'cpplint']]],
-  ['replaceall',['ReplaceAll',['../namespacecpplint.html#a1b85a5657aeab8b4a0ed85e06aed3576',1,'cpplint']]],
-  ['repositoryname',['RepositoryName',['../classcpplint_1_1FileInfo.html#a2b3b79b7d46221a6b9d0ea0bebac2061',1,'cpplint::FileInfo']]],
-  ['reseterrorcounts',['ResetErrorCounts',['../classcpplint_1_1__CppLintState.html#ab802596abd5fba5e290e090388b6842a',1,'cpplint::_CppLintState']]],
-  ['resetnolintsuppressions',['ResetNolintSuppressions',['../namespacecpplint.html#a1d92dc3582da477f98ab5b85bd13fea0',1,'cpplint']]],
-  ['resetsection',['ResetSection',['../classcpplint_1_1__IncludeState.html#a31551f83fcc626e7babb1581a486b6fa',1,'cpplint::_IncludeState']]],
-  ['restorefilters',['RestoreFilters',['../classcpplint_1_1__CppLintState.html#a7a9c9fdfe033ebe1933450b4ae524598',1,'cpplint::_CppLintState']]],
-  ['reversecloseexpression',['ReverseCloseExpression',['../namespacecpplint.html#a15cd96cbf1c13e655e156fbd98cf0bae',1,'cpplint']]]
+  ['parsearguments',['ParseArguments',['../namespacecpplint.html#a57476f6a7321d342db7b7ca98d80bd27',1,'cpplint']]],
+  ['parsenolintsuppressions',['ParseNolintSuppressions',['../namespacecpplint.html#a52ae8f1d9436d14ddb94ceed06026c43',1,'cpplint']]],
+  ['passcuststr',['passCustStr',['../classpassCustStr.html',1,'']]],
+  ['passcuststr_2ecpp',['passCustStr.cpp',['../passCustStr_8cpp.html',1,'']]],
+  ['passcuststr_2ehpp',['passCustStr.hpp',['../passCustStr_8hpp.html',1,'']]],
+  ['pp_5fstack',['pp_stack',['../classcpplint_1_1NestingState.html#a3a5ca37e3066d91830ea1faa8feae4e5',1,'cpplint::NestingState']]],
+  ['previous_5fstack_5ftop',['previous_stack_top',['../classcpplint_1_1NestingState.html#a7aa34c8fb8df73d76f702c7012c46911',1,'cpplint::NestingState']]],
+  ['printcategories',['PrintCategories',['../namespacecpplint.html#a3b1a047aa772a0d7d049d29c8ee62aba',1,'cpplint']]],
+  ['printerrorcounts',['PrintErrorCounts',['../classcpplint_1_1__CppLintState.html#a3149156b00f8d53e5625256e3df2b4f0',1,'cpplint::_CppLintState']]],
+  ['printusage',['PrintUsage',['../namespacecpplint.html#a57542503fc1cce3e5c7171fc32d6ba05',1,'cpplint']]],
+  ['processconfigoverrides',['ProcessConfigOverrides',['../namespacecpplint.html#a6b67f01b8b199f5f6a7481fc0fb53878',1,'cpplint']]],
+  ['processfile',['ProcessFile',['../namespacecpplint.html#a41785091b61e8719f4a4a886eb20fe43',1,'cpplint']]],
+  ['processfiledata',['ProcessFileData',['../namespacecpplint.html#ace3e46f0fab9638ad0e786037a5ca96c',1,'cpplint']]],
+  ['processglobalsuppresions',['ProcessGlobalSuppresions',['../namespacecpplint.html#a316dc237dc0cde7bafec3c30d5624cac',1,'cpplint']]],
+  ['processhppheadersoption',['ProcessHppHeadersOption',['../namespacecpplint.html#a28e546a8f20e32ef7dcf4ecbecd8b367',1,'cpplint']]],
+  ['processline',['ProcessLine',['../namespacecpplint.html#ac7c198c2adf60fd79a3f2b4270055a3b',1,'cpplint']]]
 ];
