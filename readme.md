@@ -1,7 +1,7 @@
 ## Build procedures:
-1. Clone Week10_HW branch from github by inputting
+1. Clone Week11_HW branch from github by inputting
 ```
-git clone -b Week10_HW https://github.com/yhsueh/beginner_tutorials.git
+git clone -b Week11_HW https://github.com/yhsueh/beginner_tutorials.git
 ```
 
 2. Move beginner_tutorials into src folder in your catkin_ws.
@@ -14,7 +14,7 @@ catkin_make
 ```
 to build the ROS package.
 
-## Procedures for using service to change talker's string:
+## Procedures for viewing tf:
 1. Create four terminals. Make sure the package's workspace is included in the PATH variable.
 
 2. Input roscore to establish a master.
@@ -33,24 +33,18 @@ in the final terminal to create the listener node.
 
 5. Input
 ```
-rosrun beginner_tutorials change_string_client <your-string-without bracket>
+rosrun tf view_frames
+evince frames.pdf
 ```
-If no argument is passed, a fatal message will be returned. If more than one string is provided, only the first string is passed.
+to inspect the transform tree.
 
-## Procedures for using roslaunch to adjust publishing rate:
+## Procedures for using roslaunch to record topics:
 1. Similar to last section. Create four terminals and repeat the procedures until the forth step.
 
 2. Input
 ```
-roslaunch beginner_tutorials node.launch frequency:=<an integer>
+roslaunch beginner_tutorials node.launch record_flag:=1
 ```
-If no argument is passed, a error message will be returned and set frequency to one. The displaying rate would increase or decrease based on the provided frequency.
+If no argument is passed, record_flag is set to 0 by default, and no topics is recorded.
 
-3. rqt_console and rqt_logger_level can display ROS logs. To use them, create two terminals and input the following:
-```
-rosrun rqt_console rqt_console
-```
-and
-```
-rosrun rqt_logger_level rqt_logger_level
-```
+

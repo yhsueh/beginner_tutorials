@@ -81,7 +81,7 @@ int main(int argc, char **argv) {
 // %Tag(SUBSCRIBER)%
   ros::Subscriber sub = n.subscribe("chatter", 1000, chatterCallback);
 // %EndTag(SUBSCRIBER)%
-
+/*
     tf::TransformListener listener;
     ros::Rate rate(10.0);
 
@@ -94,7 +94,7 @@ int main(int argc, char **argv) {
       ROS_ERROR("%s",ex.what());
       ros::Duration(1.0).sleep();
     }
-
+*/
   /**
    * ros::spin() will enter a loop, pumping callbacks.  With this version, all
    * callbacks will be called from within this thread (the main one).  ros::spin()

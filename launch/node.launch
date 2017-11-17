@@ -1,6 +1,16 @@
+<!--
+   Record all topics with record_flag as the first argument. Set 0 by default. 
+   The second argument is the frequency that controls the publishing rate
+  -->
+
 <launch>
+<arg name="record_flag" default="0"/>
 <arg name="frequency" default="0"/>
 
 <node pkg="beginner_tutorials" name="talker" type="talker" args="$(arg frequency)" output="screen"/>
 <node pkg="beginner_tutorials" name="listener" type="listener" output="screen"/>
+
+<node pkg="rosbag" type="record" name="topics_record"
+       args="record -a -O $(find beginner_tutorials)/bagfiles/bagfile"
+       if="$(arg record_flag)" />
 </launch>
