@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Week10 HW: src/listener.cpp File Reference</title>
+<title>Week10 HW: test/talker_test.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -82,52 +82,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">listener.cpp File Reference</div>  </div>
+<div class="title">talker_test.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;ros/ros.h&quot;</code><br />
-<code>#include &quot;std_msgs/String.h&quot;</code><br />
-<code>#include &quot;tf/transform_listener.h&quot;</code><br />
+<div class="textblock"><code>#include &lt;ros/ros.h&gt;</code><br />
+<code>#include &lt;ros/service_client.h&gt;</code><br />
+<code>#include &lt;gtest/gtest.h&gt;</code><br />
+<code>#include &lt;boost/shared_ptr.hpp&gt;</code><br />
+<code>#include &lt;beginner_tutorials/ChangeString.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for listener.cpp:</div>
+Include dependency graph for talker_test.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="listener_8cpp__incl.png" border="0" usemap="#src_2listener_8cpp" alt=""/></div>
-<map name="src_2listener_8cpp" id="src_2listener_8cpp">
+<div class="center"><img src="talker__test_8cpp__incl.png" border="0" usemap="#test_2talker__test_8cpp" alt=""/></div>
+<map name="test_2talker__test_8cpp" id="test_2talker__test_8cpp">
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae5c0c11b4a60030ee8df1a3ae0b6f758"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="listener_8cpp.html#ae5c0c11b4a60030ee8df1a3ae0b6f758">chatterCallback</a> (const std_msgs::String::ConstPtr &amp;msg)</td></tr>
-<tr class="separator:ae5c0c11b4a60030ee8df1a3ae0b6f758"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="listener_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memitem:a7a537813174a11ea82f0278f88082025"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="talker__test_8cpp.html#a7a537813174a11ea82f0278f88082025">TEST</a> (TESTSuite, must_pass)</td></tr>
+<tr class="separator:a7a537813174a11ea82f0278f88082025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="talker__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a7d6d3de9ddf4963eb3ea112920944a87"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; ros::NodeHandle &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="talker__test_8cpp.html#a7d6d3de9ddf4963eb3ea112920944a87">nh</a></td></tr>
+<tr class="separator:a7d6d3de9ddf4963eb3ea112920944a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ae5c0c11b4a60030ee8df1a3ae0b6f758"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void chatterCallback </td>
-          <td>(</td>
-          <td class="paramtype">const std_msgs::String::ConstPtr &amp;&#160;</td>
-          <td class="paramname"><em>msg</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>In the callback function, the listener node replies what it received from the talker node. If the user didn't modify the original message through change_string service, the listener replies with "I heard nothing new". </p>
-
-</div>
-</div>
 <a class="anchor" id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
 <div class="memitem">
 <div class="memproto">
@@ -151,12 +142,45 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>The ros::init() function needs to see argc and argv so that it can perform any ROS arguments and name remapping that were provided at the command line. For programmatic remappings you can use a different version of init() which takes remappings directly, but for most command-line programs, passing argc and argv is the easiest way to do it. The third argument to init() is the name of the node.</p>
-<p>You must call one of the versions of ros::init() before using any other part of the ROS system.</p>
-<p>NodeHandle is the main access point to communications with the ROS system. The first NodeHandle constructed will fully initialize this node, and the last NodeHandle destructed will close down the node.</p>
-<p>The subscribe() call is how you tell ROS that you want to receive messages on a given topic. This invokes a call to the ROS master node, which keeps a registry of who is publishing and who is subscribing. Messages are passed to a callback function, here called chatterCallback. subscribe() returns a Subscriber object that you must hold on to until you want to unsubscribe. When all copies of the Subscriber object go out of scope, this callback will automatically be unsubscribed from this topic.</p>
-<p>The second parameter to the subscribe() function is the size of the message queue. If messages are arriving faster than they are being processed, this is the number of messages that will be buffered up before beginning to throw away the oldest ones.</p>
-<p>ros::spin() will enter a loop, pumping callbacks. With this version, all callbacks will be called from within this thread (the main one). ros::spin() will exit when Ctrl-C is pressed, or the node is shutdown by the master.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a537813174a11ea82f0278f88082025"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">TESTSuite&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">must_pass&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="a7d6d3de9ddf4963eb3ea112920944a87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;ros::NodeHandle&gt; nh</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

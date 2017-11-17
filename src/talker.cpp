@@ -36,7 +36,6 @@
 #include "beginner_tutorials/ChangeString.h"
 #include "passCustStr.hpp"
 
-
 /**
  * This code is adopted from the ROS message tutorial. It has been modified to be able to accept 
  * the user-defined string and changes its output accordingly. In addition, the code also accepts 
@@ -154,18 +153,14 @@ int main(int argc, char **argv) {
     chatter_pub.publish(msg);
 // %EndTag(PUBLISH)%
 
-
     static tf::TransformBroadcaster br;
-     tf::Transform transform;
-    transform.setOrigin( tf::Vector3(1.0, 1.0, 1.0) );
-     tf::Quaternion q;
-     q.setRPY(3.14/6, 3.14/2, 3.14/4);
-     transform.setRotation(q);
-     br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "/world", "/talker"));
-
-
-
-
+    tf::Transform transform;
+    transform.setOrigin(tf::Vector3(1.0, 1.0, 1.0));
+    tf::Quaternion q;
+    q.setRPY(3.14 / 6, 3.14 / 2, 3.14 / 4);
+    transform.setRotation(q);
+    br.sendTransform(
+        tf::StampedTransform(transform, ros::Time::now(), "/world", "/talker"));
 
 // %Tag(SPINONCE)%
     ros::spinOnce();

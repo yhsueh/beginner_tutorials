@@ -49,6 +49,5 @@ var searchData=
   ['cleansecomments',['CleanseComments',['../namespacecpplint.html#ad795aa89f263838ec59fb0e7c52c842a',1,'cpplint']]],
   ['cleanserawstrings',['CleanseRawStrings',['../namespacecpplint.html#a61b3f81ef467e7cb417d13e9051180fc',1,'cpplint']]],
   ['closeexpression',['CloseExpression',['../namespacecpplint.html#af254258f584f59c87fcfd755e3c9017a',1,'cpplint']]],
-  ['cmake_5fminimum_5frequired',['cmake_minimum_required',['../CMakeLists_8txt.html#a257873ea53487c7f7f72678d9fcbbd0d',1,'CMakeLists.txt']]],
   ['count',['Count',['../classcpplint_1_1__FunctionState.html#ac25c9711911ae181b091b52619cf2701',1,'cpplint::_FunctionState']]]
 ];

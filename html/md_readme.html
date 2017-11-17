@@ -81,20 +81,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><ol type="1">
-<li>Create a catkin workspace using command catkin_make in the workspace folder.</li>
-<li>Make sure ROS_PACKAGE_PATH enviroment variable contain the workspace folder. This is done by sourcing the generated setup file under devel folder in the parent directory.</li>
-<li>Create a package inside workspace src folder using command catkin_create_pkg beginning_tutorials std_msgs rospy roscpp.</li>
-<li>Go back to parent directory and input command catkin_make again.</li>
-<li>Add talker and listener cpp files into the source folder under beginner_tutorials package.</li>
-<li>Modify CmakeLists.txt to include talker and listener cpp files.</li>
-<li>Include necessary dependencies like roscpp and std_msgs and beginner_tutorials_generate_messages_cpp.</li>
+<li>Clone Week11_HW branch from github by inputting <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;git clone -b Week11_HW https://github.com/yhsueh/beginner_tutorials.git</div></div><!-- fragment --></li>
+<li>Move beginner_tutorials into src folder in your catkin_ws.</li>
 </ol>
-<h2>Run procedures:</h2>
 <ol type="1">
-<li>Create three terminals. Make sure the package's workspace is included in the PATH variable.</li>
+<li>Make sure ROS_PACKAGE_PATH enviroment variable contain the workspace folder. This is done by sourcing the generated setup file under devel folder in the parent directory.</li>
+<li>Input <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;catkin_make</div></div><!-- fragment --> to build the ROS package.</li>
+</ol>
+<h2>Procedures for viewing tf:</h2>
+<ol type="1">
+<li>Create four terminals. Make sure the package's workspace is included in the PATH variable.</li>
 <li>Input roscore to establish a master.</li>
 <li>Input <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;rosrun beginner_tutorials talker</div></div><!-- fragment --> in a different terminal to create the talker node.</li>
-<li>Input <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;rosrun beginner_tutorials listener</div></div><!-- fragment --> in the final terminal to create the listener node. </li>
+<li>Input <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;rosrun beginner_tutorials listener</div></div><!-- fragment --> in the final terminal to create the listener node.</li>
+<li>Input <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;rosrun tf view_frames</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;evince frames.pdf</div></div><!-- fragment --> to inspect the transform tree.</li>
+<li>To see the relative transformation <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;rosrun tf tf_echo /world /talker</div></div><!-- fragment --></li>
+</ol>
+<h2>Procedures for running gtests:</h2>
+<ol type="1">
+<li>Build testing cpp with: Return to catkin_ws <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;catkin_make tests</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;catkin_make test</div></div><!-- fragment --></li>
+</ol>
+<h2>Procedures for using roslaunch to record topics and read the bagfile:</h2>
+<ol type="1">
+<li>Similar to last section. Create four terminals and repeat the procedures until the forth step.</li>
+<li>Input <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;roslaunch beginner_tutorials node.launch record_flag:=1</div></div><!-- fragment --> If no argument is passed, record_flag is set to 0 by default, and no topics is recorded.</li>
+<li>See what topics is recorded <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cd {&quot;beginner_package&quot;}/results</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;rosbag info bagfile.bag</div></div><!-- fragment --></li>
+<li>Replay chatter messages using listener node <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;rosrun beginner_tutorials listener</div></div><!-- fragment --> then in a different terminal <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;rosbag play bagfile.bag</div></div><!-- fragment --> </li>
 </ol>
 </div></div><!-- contents -->
 <!-- start footer part -->

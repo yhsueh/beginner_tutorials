@@ -1,7 +1,4 @@
-<!--
-   Record all topics with record_flag as the first argument. Set 0 by default. 
-   The second argument is the frequency that controls the publishing rate
-  -->
+
 
 <launch>
 <arg name="record_flag" default="0"/>

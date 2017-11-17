@@ -1,19 +1,26 @@
 
 \begin{DoxyEnumerate}
-\item Create a catkin workspace using command catkin\+\_\+make in the workspace folder.
+\item Clone Week11\+\_\+\+HW branch from github by inputting 
+\begin{DoxyCode}
+1 git clone -b Week11\_HW https://github.com/yhsueh/beginner\_tutorials.git
+\end{DoxyCode}
+
+\item Move beginner\+\_\+tutorials into src folder in your catkin\+\_\+ws.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
 \item Make sure R\+O\+S\+\_\+\+P\+A\+C\+K\+A\+G\+E\+\_\+\+P\+A\+TH enviroment variable contain the workspace folder. This is done by sourcing the generated setup file under devel folder in the parent directory.
-\item Create a package inside workspace src folder using command catkin\+\_\+create\+\_\+pkg beginning\+\_\+tutorials std\+\_\+msgs rospy roscpp.
-\item Go back to parent directory and input command catkin\+\_\+make again.
-\item Add talker and listener cpp files into the source folder under beginner\+\_\+tutorials package.
-\item Modify Cmake\+Lists.\+txt to include talker and listener cpp files.
-\item Include necessary dependencies like roscpp and std\+\_\+msgs and beginner\+\_\+tutorials\+\_\+generate\+\_\+messages\+\_\+cpp.
+\item Input 
+\begin{DoxyCode}
+1 catkin\_make
+\end{DoxyCode}
+ to build the R\+OS package.
 \end{DoxyEnumerate}
 
-\subsection*{Run procedures\+:}
+\subsection*{Procedures for viewing tf\+:}
 
 
 \begin{DoxyEnumerate}
-\item Create three terminals. Make sure the package\textquotesingle{}s workspace is included in the P\+A\+TH variable.
+\item Create four terminals. Make sure the package\textquotesingle{}s workspace is included in the P\+A\+TH variable.
 \item Input roscore to establish a master.
 \item Input 
 \begin{DoxyCode}
@@ -24,5 +31,55 @@
 \begin{DoxyCode}
 1 rosrun beginner\_tutorials listener
 \end{DoxyCode}
- in the final terminal to create the listener node. 
+ in the final terminal to create the listener node.
+\item Input 
+\begin{DoxyCode}
+1 rosrun tf view\_frames
+2 evince frames.pdf
+\end{DoxyCode}
+ to inspect the transform tree.
+\item To see the relative transformation 
+\begin{DoxyCode}
+1 rosrun tf tf\_echo /world /talker
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+\subsection*{Procedures for running gtests\+:}
+
+
+\begin{DoxyEnumerate}
+\item Build testing cpp with\+: Return to catkin\+\_\+ws 
+\begin{DoxyCode}
+1 catkin\_make tests
+2 catkin\_make test
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+\subsection*{Procedures for using roslaunch to record topics and read the bagfile\+:}
+
+
+\begin{DoxyEnumerate}
+\item Similar to last section. Create four terminals and repeat the procedures until the forth step.
+\item Input 
+\begin{DoxyCode}
+1 roslaunch beginner\_tutorials node.launch record\_flag:=1
+\end{DoxyCode}
+ If no argument is passed, record\+\_\+flag is set to 0 by default, and no topics is recorded.
+\item See what topics is recorded 
+\begin{DoxyCode}
+1 cd \{"beginner\_package"\}/results
+2 rosbag info bagfile.bag
+\end{DoxyCode}
+
+\item Replay chatter messages using listener node 
+\begin{DoxyCode}
+1 rosrun beginner\_tutorials listener
+\end{DoxyCode}
+ then in a different terminal 
+\begin{DoxyCode}
+1 rosbag play bagfile.bag
+\end{DoxyCode}
+ 
 \end{DoxyEnumerate}
