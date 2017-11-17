@@ -40,13 +40,13 @@ to inspect the transform tree.
 
 ## Procedures for running gtests:
 1. Build testing cpp with:
+Return to catkin_ws
 ```
 catkin_make tests
 catkin_make test
-
 ```
 
-## Procedures for using roslaunch to record topics:
+## Procedures for using roslaunch to record topics and read the bagfile:
 1. Similar to last section. Create four terminals and repeat the procedures until the forth step.
 
 2. Input
@@ -54,5 +54,22 @@ catkin_make test
 roslaunch beginner_tutorials node.launch record_flag:=1
 ```
 If no argument is passed, record_flag is set to 0 by default, and no topics is recorded.
+
+3. 
+See what topics is recorded
+```
+cd {"beginner_package"}/results
+rosbag info bagfile.bag
+```
+
+4. Replay chatter messages using listener node
+```
+rosrun beginner_tutorials listener
+
+```
+then in a different terminal
+```
+rosbag play bagfile.bag
+```
 
 
