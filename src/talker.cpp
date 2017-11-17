@@ -159,9 +159,9 @@ int main(int argc, char **argv) {
      tf::Transform transform;
     transform.setOrigin( tf::Vector3(1.0, 1.0, 1.0) );
      tf::Quaternion q;
-     q.setRPY(30, 60, 90);
+     q.setRPY(3.14/6, 3.14/2, 3.14/4);
      transform.setRotation(q);
-     br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "world", "talker"));
+     br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "/world", "/talker"));
 
 
 
