@@ -21,6 +21,11 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+
+/** @file passCustStr.hpp
+ * @brief  This class is created to read and use the message received from the client.
+ * It contains a string and a bool function.
+ */
 #pragma once
 #include <string>
 #include "beginner_tutorials/ChangeString.h"

@@ -21,14 +21,18 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+
+/** @file change_string_client.cpp 
+ * @brief This is the client node of the service "change_string". One would enter a string argument, which would
+ * be sent to the server node. And then, the server node would change its publishing content based on the 
+ * string provided by the user. If no service is called, then the default string is "Hello".
+ */
+
 #include <cstdlib>
 #include "beginner_tutorials/ChangeString.h"
 #include "ros/ros.h"
 
-/** This is the client node of the service "change_string". One would enter a string argument, which would
- * be sent to the server node. And then, the server node would change its publishing content based on the 
- * string provided by the user. If no service is called, then the default string is "Hello".
- */
+
 int main(int argc, char **argv) {
   ros::init(argc, argv, "change_string_client");
 

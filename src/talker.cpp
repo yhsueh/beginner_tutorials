@@ -21,6 +21,12 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
+
+/** @file talker.cpp
+ * @brief Talker noder within beginner_tutorials package. It's also a service 
+ * node, a message publishing node, and a tf broadcasting node.
+ */
+
 // %Tag(FULLTEXT)%
 #include <string>
 #include <sstream>

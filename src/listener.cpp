@@ -22,6 +22,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+/** @file listener.cpp
+ *	@brief Listener node within beginner_tutorials package
+ */
+
 // %Tag(FULLTEXT)%
 #include "ros/ros.h"
 #include "std_msgs/String.h"
