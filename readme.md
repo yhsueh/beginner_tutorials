@@ -38,6 +38,11 @@ evince frames.pdf
 ```
 to inspect the transform tree.
 
+6. To see the relative transformation
+```
+rosrun tf tf_echo /world /talker
+```
+
 ## Procedures for running gtests:
 1. Build testing cpp with:
 Return to catkin_ws
