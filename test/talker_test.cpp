@@ -26,11 +26,12 @@
  *	@brief Integration test on service/client nodes.
  */
 
+#include <beginner_tutorials/ChangeString.h>
 #include <ros/ros.h>
 #include <ros/service_client.h>
 #include <gtest/gtest.h>
 #include <boost/shared_ptr.hpp>
-#include <beginner_tutorials/ChangeString.h>
+
 
 std::shared_ptr<ros::NodeHandle> nh;
 
@@ -39,8 +40,7 @@ std::shared_ptr<ros::NodeHandle> nh;
  * client are same.
  */
 
-TEST(TESTSuite, must_pass)
-{
+TEST(TESTSuite, must_pass) {
   ros::ServiceClient client = nh->serviceClient< beginner_tutorials::ChangeString
   > ("change_string");
   bool exists(client.waitForExistence(ros::Duration(1)));
