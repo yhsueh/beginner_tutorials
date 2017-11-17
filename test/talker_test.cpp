@@ -41,8 +41,7 @@ std::shared_ptr<ros::NodeHandle> nh;
  */
 
 
-TEST(TESTSuite, must_pass)
-{ 
+TEST(TESTSuite, must_pass) {
   ros::ServiceClient client = nh->serviceClient< beginner_tutorials::ChangeString
   > ("change_string");
   bool exists(client.waitForExistence(ros::Duration(1)));
@@ -50,10 +49,13 @@ TEST(TESTSuite, must_pass)
 
   beginner_tutorials::ChangeString srv;
   srv.request.input = "HELLO_WORLD";
-  client.call(srv);
 
-  //EXPECT_EQ(srv.request.input, srv.response.reply);
-  EXPECT_EQ(1,1);
+  /** 
+    * wait for the service to be called
+    */
+  while (!client.call(srv)) {}
+
+  EXPECT_EQ(srv.request.input, srv.response.reply);
 }
 
 int main(int argc, char **argv) {

@@ -5,6 +5,7 @@ var searchData=
   ['passcuststr',['passCustStr',['../classpassCustStr.html',1,'']]],
   ['passcuststr_2ecpp',['passCustStr.cpp',['../passCustStr_8cpp.html',1,'']]],
   ['passcuststr_2ehpp',['passCustStr.hpp',['../passCustStr_8hpp.html',1,'']]],
+  ['pointer',['pointer',['../cpplint_8txt.html#a127844d2149371fa36c108b950beca56',1,'cpplint.txt']]],
   ['pp_5fstack',['pp_stack',['../classcpplint_1_1NestingState.html#a3a5ca37e3066d91830ea1faa8feae4e5',1,'cpplint::NestingState']]],
   ['previous_5fstack_5ftop',['previous_stack_top',['../classcpplint_1_1NestingState.html#a7aa34c8fb8df73d76f702c7012c46911',1,'cpplint::NestingState']]],
   ['printcategories',['PrintCategories',['../namespacecpplint.html#a3b1a047aa772a0d7d049d29c8ee62aba',1,'cpplint']]],
