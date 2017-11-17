@@ -38,6 +38,14 @@ evince frames.pdf
 ```
 to inspect the transform tree.
 
+## Procedures for running gtests:
+1. Build testing cpp with:
+```
+catkin_make tests
+catkin_make test
+
+```
+
 ## Procedures for using roslaunch to record topics:
 1. Similar to last section. Create four terminals and repeat the procedures until the forth step.
 
