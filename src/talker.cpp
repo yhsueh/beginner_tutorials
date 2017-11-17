@@ -27,10 +27,12 @@
 #include <cstdlib>
 // %Tag(ROS_HEADER)%
 #include "ros/ros.h"
+#include "tf/transform_broadcaster.h"
 // %EndTag(ROS_HEADER)%
 // %Tag(MSG_HEADER)%
 #include "std_msgs/String.h"
 // %EndTag(MSG_HEADER)%
+
 #include "beginner_tutorials/ChangeString.h"
 #include "passCustStr.hpp"
 
@@ -151,6 +153,19 @@ int main(int argc, char **argv) {
 // %Tag(PUBLISH)%
     chatter_pub.publish(msg);
 // %EndTag(PUBLISH)%
+
+
+    static tf::TransformBroadcaster br;
+     tf::Transform transform;
+    transform.setOrigin( tf::Vector3(1.0, 1.0, 1.0) );
+     tf::Quaternion q;
+     q.setRPY(30, 60, 90);
+     transform.setRotation(q);
+     br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "world", "talker"));
+
+
+
+
 
 // %Tag(SPINONCE)%
     ros::spinOnce();
